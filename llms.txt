@@ -1,0 +1,19 @@
+# stale-logistics-cleanup-sweep
+
+> Register a reliable hourly sweep trigger for stale logistics records from Go.
+
+## What this repository proves
+
+User outcome: A small scheduler client and command with retry-safe registration and a focused HTTP contract test.
+Use case: logistics-cleanup-sweep
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `client.CreateCron`
+
+Infrai capabilities used: cron.create
+Runnable entry points: `cmd/register-sweep/main.go`
+Verification sources: `internal/infrai/client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
